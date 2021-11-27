@@ -1,12 +1,20 @@
 <template>
-	<form>
+	<div>
+		<h1 class="is-size-2-desktop is-size-3-mobile has-text-weight-semibold has-text-centered">
+			Olá novamente!
+		</h1>
+
+		<p class="is-size-5 has-text-centered mb-4">
+			Entre em sua conta
+		</p>
+
 		<FormLogin />
-	</form>
+	</div>
 </template>
 
 <script>
 export default {
-	layouts: 'form',
+	layout: 'form',
 
 	head() {
 		return {
@@ -16,7 +24,7 @@ export default {
 				{
 					hid: 'description',
 					name: 'description',
-					content: ''
+					content: 'Faça seu login e adentre nesse mundo de possibilidades!'
 				},
 				{
 					name: 'url',
@@ -30,7 +38,7 @@ export default {
 				},
 				{
 					property: 'og:description',
-					content: ''
+					content: 'Faça seu login e adentre nesse mundo de possibilidades!'
 				},
 				{
 					property: 'og:url',
@@ -41,3 +49,13 @@ export default {
 	}
 }
 </script>
+
+<style scoped>
+	div h1 {
+		color: var(--yellow-color);
+	}
+
+	div p {
+		color: var(--black-color);
+	}
+</style>

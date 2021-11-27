@@ -41,8 +41,8 @@ export default {
 			// Favicon
 			{ 
 				rel: 'icon', 
-				type: 'image/svg', 
-				href: '/favicon.svg' 
+				type: 'image/x-icon', 
+				href: '/faicon.ico' 
 			},
 
 			// Font

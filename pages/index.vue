@@ -10,7 +10,7 @@
 
 <script>
 export default {
-	layouts: 'default',
+	layout: 'header',
 
 	head() {
 		return {

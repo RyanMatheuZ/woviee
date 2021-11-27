@@ -6,4 +6,12 @@
 	--black-color: #131313;
 	--white-color: #FFFFFF;
 	--yellow-color: #F5C618;
+	--yellow-dark-color: #FDBD18;
+}
+
+/* ========== Input ========== */
+.input:focus {
+	border-color: var(--yellow-color);
+    -webkit-box-shadow: 0 0 0 0.125em var(--yellow-color);
+    box-shadow: 0 0 0 0.125em var(--yellow-color);
 }
