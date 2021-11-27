@@ -1,12 +1,12 @@
 <template>
-	<header class="py-4">
+	<header class="is-flex is-align-items-center is-justify-content-center py-3">
 		<img 
-			src="@/static/icon/back-icon.svg" 
+			src="@/static/logo/woviee.svg" 
 			alt="Woviee"
 			title="Woviee"
 			draggable="false"
-			width="90"
-			height="90"
+			width="60"
+			height="60"
 		>
 	</header>
 </template>

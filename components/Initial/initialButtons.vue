@@ -1,14 +1,14 @@
 <template>
 	<div class="is-flex is-flex-direction-column is-align-items-center p-3">
 		<NuxtLink 
-			to="/FormRegister"
+			to="/register"
 			class="button-register button is-medium is-rounded my-2"
 		>
 			Cadastrar-se
 		</NuxtLink>
 
 		<NuxtLink 
-			to="/FormLogin"
+			to="/login"
 			class="button-login button is-medium is-rounded my-2"
 		>
 			Entrar
