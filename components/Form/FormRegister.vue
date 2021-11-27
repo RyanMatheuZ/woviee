@@ -2,11 +2,12 @@
 	<form class="is-flex is-align-items-center is-flex-direction-column">
 		<b-field 
 			class="field-block my-3"
-			:class="{ 'is-danger' : $v.name.$error }"
+			:type="{ 'is-danger': $v.name.$error }"
 		>
             <b-input 
 				v-model="$v.name.$model"
 				placeholder="Seu nome:"
+				title="Seu nome:"
                 type="text"
                 icon="account"
 				class="input-block"
@@ -14,21 +15,22 @@
             </b-input>
         </b-field>
 		
-		<small v-if="$v.name.$error" class="has-text-danger">
+		<span v-if="$v.name.$error" class="has-text-danger">
 			Informe seu nome!
-		</small>
+		</span>
 
-		<small class="has-text-danger">
-			O mínimo de caracteres é {{ $v.name.$params.minLength.min }}
-		</small>
+		<span v-if="!$v.name.minLength" class="has-text-danger">
+			O mínimo de caracteres é {{ $v.name.$params.minLength.min }}!
+		</span>
 
 		<b-field 
 			class="field-block my-3"
-			:class="{ 'is-danger' : $v.email.$error }"
+			:type="{ 'is-danger': $v.email.$error }"
 		>
             <b-input 
 				v-model="$v.email.$model"
 				placeholder="Seu e-mail:"
+				title="Seu e-mail:"
                 type="text"
                 icon="email"
 				class="input-block"
@@ -36,32 +38,32 @@
             </b-input>
         </b-field>
 
-		<small v-if="$v.email.$error" class="has-text-danger">
+		<span v-if="$v.email.$error" class="has-text-danger">
 			Informe um E-mail válido!
-		</small>
+		</span>
 
         <b-field 
 			class="field-block my-3"
-			:class="{ 'is-danger' : $v.password.$error }"
+			:type="{ 'is-danger': $v.password.$error }"
 		>
             <b-input 
 				v-model="$v.password.$model"
 				placeholder="Sua senha:"
+				title="Sua senha:"
 				type="password"
 				icon="lock"
-                password-reveal
 				class="input-block"
 			>
             </b-input>
         </b-field>
 
-		<small v-if="$v.password.$error" class="has-text-danger">
-			Informe uma senha!
-		</small>
+		<span v-if="$v.password.$error" class="has-text-danger">
+			Informe sua senha!
+		</span>
 
-		<small v-if="!$v.password.minLength" class="has-text-danger">
+		<span v-if="!$v.password.minLength" class="has-text-danger">
 			O mínimo de caracteres é {{ $v.password.$params.minLength.min }}!
-		</small>
+		</span>
 
 		<small class="has-text-centered my-4">
 			<span class="has-text-weight-medium">Ao cadastrar, você concorda com nossos</span> termos de <br> uso
@@ -70,7 +72,8 @@
 
 		<button 
 			@click.prevent.stop="checkRegister"
-			class="button-login button is-medium has-text-weight-medium is-rounded my-2"
+			title="Cadastrar-se"
+			class="button-login button are-medium has-text-weight-medium is-rounded my-2"
 		>
 			Cadastrar-se
 		</button>
@@ -78,6 +81,7 @@
 </template>
 
 <script>
+import { validationMixin } from 'vuelidate'
 import { required, email, minLength } from 'vuelidate/lib/validators'
 
 export default {
@@ -89,9 +93,11 @@ export default {
 		}
 	},
 
+	mixins: [ validationMixin ],
+
 	validations: {
 		name: { required, minLength: minLength(4) },
-		email: { required,email },
+		email: { required, email },
 		password: { required, minLength: minLength(8) }
 	},
 

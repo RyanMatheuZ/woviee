@@ -34,14 +34,6 @@
 	</div>
 </template>
 
-<script>
-import { validationMixin } from 'vuelidate'
-
-export default {
-	mixins: [ validationMixin ]
-}
-</script>
-
 <style>
 	.background {
 		background-color: var(--black-color);

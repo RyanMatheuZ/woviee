@@ -42,7 +42,7 @@ export default {
 			{ 
 				rel: 'icon', 
 				type: 'image/x-icon', 
-				href: '/faicon.ico' 
+				href: '/favicon.ico' 
 			},
 
 			// Font
