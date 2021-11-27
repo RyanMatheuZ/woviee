@@ -10,6 +10,8 @@
 
 <script>
 export default {
+	layouts: 'default',
+
 	head() {
 		return {
 			title: 'Woviee - Bem Vindo!',
