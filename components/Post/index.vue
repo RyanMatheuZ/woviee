@@ -18,7 +18,7 @@
 					>
 				</figure>
 
-				<span class="is-flex is-flex-direction-column">
+				<div class="is-flex is-flex-direction-column">
 					<div class="is-flex is-align-items-center">
 						<span class="has-text-weight-semibold">
 							{{ post.profileName }}
@@ -39,12 +39,12 @@
 					<span class="is-size-7">
 						{{ post.postTime }}
 					</span>
-				</span>
+				</div>
 			</div>
 
-			<div class="pl-2 my-3">
+			<p class="pl-2 my-3">
 				{{ post.postTitle }}
-			</div>
+			</p>
 
 			<figure class="post-image">
 				<img 

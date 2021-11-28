@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<main>
 		<h1 class="is-size-2-desktop is-size-3-mobile has-text-weight-semibold has-text-centered">
 			Olá novamente!
 		</h1>
@@ -9,7 +9,7 @@
 		</p>
 
 		<FormLogin />
-	</div>
+	</main>
 </template>
 
 <script>
@@ -28,7 +28,7 @@ export default {
 				},
 				{
 					name: 'url',
-					content: 'https://woviee.vercel.app'
+					content: 'https://woviee.vercel.app/login'
 				},
 
 				// Open Graph
@@ -42,7 +42,7 @@ export default {
 				},
 				{
 					property: 'og:url',
-					content: 'https://woviee.vercel.app'
+					content: 'https://woviee.vercel.app/login'
 				}
 			]
 		}
@@ -51,11 +51,11 @@ export default {
 </script>
 
 <style scoped>
-	div h1 {
+	main h1 {
 		color: var(--yellow-color);
 	}
 
-	div p {
+	main p {
 		color: var(--black-color);
 	}
 </style>

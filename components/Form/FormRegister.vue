@@ -107,7 +107,9 @@ export default {
 
 			if (this.$v.$invalid) return
 
-			// this.$router.push()
+			this.name = ''
+			this.email = ''
+			this.password = ''
 
 			this.$v.$reset()
 		}
@@ -129,7 +131,7 @@ export default {
 		user-select: none;
 	}
 
-	form > small > span {
+	form > small span {
 		color: var(--yellow-dark-color);
 	}
 

@@ -42,6 +42,16 @@
 			O mínimo de caracteres é {{ $v.password.$params.minLength.min }}!
 		</span>		
 
+		<small class="has-text-centered my-4">
+			Não possui uma conta ainda? <br>
+			<NuxtLink
+				to="/register"
+				class="has-text-weight-medium"
+			>
+				Crie uma agora
+			</NuxtLink>
+		</small>
+
 		<button 
 			@click.prevent.stop="checkLogin"
 			title="Entrar"
@@ -77,9 +87,12 @@ export default {
 
 			if (this.$v.$invalid) return
 
-			// this.$router.push()
+			this.email = ''
+			this.password = ''			
 
-			this.$v.reset()
+			this.$router.push('/feed')
+
+			this.$v.$reset()
 		}
 	}
 }
@@ -92,6 +105,15 @@ export default {
 
 	form .input-block {
 		max-width: 400px;
+	}
+
+	form > small {
+		cursor: default;
+		user-select: none;
+	}
+
+	form > small a {
+		color: var(--yellow-dark-color);
 	}
 
 	form button {

@@ -16,11 +16,11 @@ export default {
 				{
 					hid: 'description',
 					name: 'description',
-					content: ''
+					content: 'Olá usuário, agora que entrou nesse mundo de possibilidade, apenas APROVEITE!'
 				},
 				{
 					name: 'url',
-					content: 'https://woviee.vercel.app'
+					content: 'https://woviee.vercel.app/feed'
 				},
 
 				// Open Graph
@@ -30,11 +30,11 @@ export default {
 				},
 				{
 					property: 'og:description',
-					content: ''
+					content: 'Olá usuário, agora que entrou nesse mundo de possibilidade, apenas APROVEITE!'
 				},
 				{
 					property: 'og:url',
-					content: 'https://woviee.vercel.app'
+					content: 'https://woviee.vercel.app/feed'
 				}
 			]
 		}

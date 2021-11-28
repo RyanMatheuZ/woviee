@@ -1,5 +1,5 @@
 <template>
-	<div class="is-flex is-flex-direction-column p-4">
+	<section class="is-flex is-flex-direction-column p-4">
 		<header class="is-flex is-flex-wrap-wrap is-align-items-center is-justify-content-space-around mt-6 mb-6">
 			<div class="m-5">
 				<h1 class="is-size-3-mobile is-size-2-desktop has-text-weight-semibold pl-4">
@@ -35,20 +35,20 @@
 				Role para baixo
 			</p>
 		</div>
-	</div>
+	</section>
 </template>
 
 <style scoped>
-	div {
+	section {
 		background-color: var(--black-color);
 	}
 
-	div h1 {
+	section h1 {
 		border-left: 8px solid var(--yellow-color);
 		color: var(--white-color);
 	}
 
-	div p {
+	section p {
 		color: var(--yellow-color);
 	}
 </style>
