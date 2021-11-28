@@ -1,6 +1,6 @@
 <template>
 	<section class="background is-flex is-align-items-center is-flex-direction-column">
-		<!-- POST -->
+		<!-- POSTS -->
 		<article 
 			v-for="(post, index) of posts"
 			:key="index"
@@ -27,8 +27,8 @@
 						<figure class="image is-16x16 ml-1">
 							<img 
 								src="@/static/icon/check-profile.svg" 
-								:alt="post.profileName"
-								:title="post.profileName"
+								alt="Verificado"
+								title="Verificado"
 								draggable="false"
 								width="16"
 								height="16"
@@ -57,35 +57,68 @@
 				>
 			</figure>
 
+			<!-- COMMENTS -->
 			<div>
 				<p class="mt-3 mb-4">
 					Comentários:
 				</p>
 
+				<!-- TEXTAREA -->
 				<b-field class="m-0">
             		<b-input 
-						v-model="comment"
+						v-model="comments[index].comment"
 						placeholder="Insira aqui seu comentário:"
 						maxlength="200" 
 						type="textarea"
-						class="m-0"
 					></b-input>
         		</b-field>
 
+				<!-- BUTTON CLEAR -->
 				<b-button
+					@click="clearComment(index)"
 					type="is-danger"
 					rounded
 				>
 					Limpar
 				</b-button>
 
+				<!-- BUTTON SEND -->
 				<b-button
+					@click="sendComment(index)"
 					type="is-success"
 					rounded
 					class="ml-2"
 				>
 					Enviar
 				</b-button>
+			</div>
+
+			<hr class="my-5">
+
+			<!-- SUBMITTED COMMENTS -->
+			<div
+				v-for="(comment, index) of submittedComments[index].comment"
+				:key="index"
+				class="is-flex mt-4"
+			>
+				<!-- ACCOUNT IMAGE -->
+				<figure>
+					<img 
+						src="@/static/icon/account-icon.svg" 
+						alt="Você"
+						title="Você"
+						draggable="false"
+						width="50"
+						height="50"
+					>
+				</figure>
+
+				<!-- COMMENT -->
+				<div
+					class="comment p-2 ml-3"
+				>
+					{{ comment }}
+				</div>
 			</div>
 		</article>
 
@@ -112,7 +145,41 @@ export default {
 			isImageModalActive: false,
 			imageModal: 'fatec-post.jpg',
 
-			comment: '',
+			comments: [
+				{
+					comment: ''
+				},
+				{
+					comment: ''
+				},
+				{
+					comment: ''
+				},
+				{
+					comment: ''
+				},
+				{
+					comment: ''
+				},
+			],
+
+			submittedComments: [
+				{
+					comment: []
+				},
+				{
+					comment: []
+				},
+				{
+					comment: []
+				},
+				{
+					comment: []
+				},
+				{
+					comment: []
+				}
+			],
 
 			posts: [
 				{
@@ -158,6 +225,14 @@ export default {
 		getPicture(index) {
 			this.imageModal = this.posts[index].postImage
 			this.isImageModalActive = true
+		},
+
+		clearComment(index) {
+			this.comments[index].comment = ''
+		},
+
+		sendComment(index) {
+			this.submittedComments[index].comment.push(this.comments[index].comment)
 		}
 	}
 }
@@ -183,5 +258,15 @@ export default {
 
 	.background > .post .profile-picture img {
 		border-radius: 50%;
+	}
+
+	.background > .post .comment {
+		border: 1px solid #B5B5B5;
+		border-radius: 5px;
+		width: 100%;
+	}
+
+	.background > .post hr {
+		background-color: #F0F0F0;
 	}
 </style>

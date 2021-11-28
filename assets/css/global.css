@@ -1,12 +1,3 @@
-* {
-	font-family: 'Outfit', sans-serif;
-}
-
-html,
-body {
-	height: 100%;
-}
-
 :root {
 	--black-color: #131313;
 	--black-medium-color: #222222;
@@ -15,7 +6,11 @@ body {
 	--yellow-dark-color: #FDBD18;
 }
 
-/* ========== Input ========== */
+html,
+body {
+	font-family: 'Outfit', sans-serif;
+}
+
 .input:focus,
 .textarea:focus {
 	border-color: var(--yellow-color);
