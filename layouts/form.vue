@@ -34,7 +34,7 @@
 	</div>
 </template>
 
-<style>
+<style scoped>
 	.background {
 		background-color: var(--black-color);
 	}
