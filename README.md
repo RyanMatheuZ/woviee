@@ -1,3 +1,5 @@
+<img src="./static/logo/woviee.svg" alt="Woviee" title="Woviee" width="80">
+
 # Woviee
 
 ### About
