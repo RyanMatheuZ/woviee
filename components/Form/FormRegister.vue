@@ -70,6 +70,10 @@
 			<span class="has-text-weight-medium">e</span> política de privacidade
 		</small>
 
+		<span class="has-text-success has-text-weight-semibold">
+			{{ registerMessage }}
+		</span>
+
 		<button 
 			@click.prevent.stop="checkRegister"
 			title="Cadastrar-se"
@@ -89,7 +93,9 @@ export default {
 		return {
 			name: '',
 			email: '',
-			password: ''
+			password: '',
+
+			registerMessage: ''
 		}
 	},
 
@@ -105,11 +111,15 @@ export default {
 		checkRegister() {
 			this.$v.$touch()
 
+			this.registerMessage = ''
+
 			if (this.$v.$invalid) return
 
 			this.name = ''
 			this.email = ''
 			this.password = ''
+
+			this.registerMessage = 'Cadastro realizado!'
 
 			this.$v.$reset()
 		}

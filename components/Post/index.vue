@@ -1,5 +1,27 @@
 <template>
 	<section class="background is-flex is-align-items-center is-flex-direction-column">
+		<div class="menu px-5 py-4">
+			<div class="container is-flex is-align-items-center is-justify-content-space-between">
+				<NuxtLink to="/">
+					<img 
+						src="@/static/icon/exit-icon.svg" 
+						alt="Sair"
+						title="Sair"
+						draggable="false"
+						width="40"
+						height="40"
+					>
+				</NuxtLink>
+
+				<span 
+					class="has-text-weight-semibold"
+					title="Data"
+				>
+					Data: {{ currentDay }} / {{ currentMonth }} / {{ currentYear }}
+				</span>
+			</div>
+		</div>
+
 		<!-- POSTS -->
 		<article 
 			v-for="(post, index) of posts"
@@ -142,6 +164,10 @@
 export default {
 	data() {
 		return {
+			currentDay: new Date().getDate(),
+			currentMonth: new Date().getMonth() + 1,
+			currentYear: new Date().getFullYear(),
+
 			isImageModalActive: false,
 			imageModal: 'fatec-post.jpg',
 
@@ -232,7 +258,10 @@ export default {
 		},
 
 		sendComment(index) {
+			if (!this.comments[index].comment) return
+
 			this.submittedComments[index].comment.push(this.comments[index].comment)
+			this.comments[index].comment = ''
 		}
 	}
 }
@@ -243,11 +272,16 @@ export default {
 		background-color: var(--black-medium-color);
 	}
 
+	.background > .menu {
+		background-color: var(--yellow-color);
+		width: 100%;
+	}
+
 	.background > .post {
 		background-color: var(--white-color);
 		border-radius: 5px;
 		border: 0.5px solid var(--black-color);
-		max-width: 600px;
+		max-width: 650px;
 		width: 100%;
 	}
 
@@ -268,5 +302,11 @@ export default {
 
 	.background > .post hr {
 		background-color: #F0F0F0;
+	}
+
+	.background .warning {
+		bottom: 2%;
+		position: fixed;
+		right: 2%;
 	}
 </style>
