@@ -8,7 +8,7 @@
 
 <style scoped>
 	section {
-		background-color: var(--black-color);
+		background-color: #131313;
 		height: 200px;
 	}
 </style>

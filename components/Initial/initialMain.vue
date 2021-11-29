@@ -40,15 +40,15 @@
 
 <style scoped>
 	section {
-		background-color: var(--black-color);
+		background-color: #131313;
 	}
 
 	section h1 {
-		border-left: 8px solid var(--yellow-color);
-		color: var(--white-color);
+		border-left: 8px solid #F5C618;
+		color: #FFF;
 	}
 
 	section p {
-		color: var(--yellow-color);
+		color: #F5C618;
 	}
 </style>

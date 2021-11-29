@@ -18,7 +18,7 @@
 
 <style scoped>
 	section {
-		background-color: var(--yellow-color);
+		background-color: #F5C618;
 	}
 
 	section .button {
@@ -27,11 +27,11 @@
 	}
 
 	section .button-register {
-		color: var(--black-color);
+		color: #131313;
 	}
 
 	section .button-login {
-		background-color: var(--black-color);
-		color: var(--white-color);
+		background-color: #131313;
+		color: #FFF;
 	}
 </style>

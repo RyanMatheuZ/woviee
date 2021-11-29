@@ -36,11 +36,11 @@
 
 <style scoped>
 	.background {
-		background-color: var(--black-color);
+		background-color: #131313;
 	}
 
 	.background > section {
-		background-color: var(--black-color);
+		background-color: #131313;
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		max-width: 1300px;
@@ -51,7 +51,7 @@
 	}
 
 	.background > section > .back-button > img {
-		background-color: var(--white-color);
+		background-color: #FFF;
 	}
 
 	.background > section > figure {
@@ -59,7 +59,7 @@
 	}
 
 	.background div {
-		background-color: var(--white-color);
+		background-color: #FFF;
 		border-top-left-radius: 100px;
 	}
 </style>

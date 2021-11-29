@@ -269,25 +269,25 @@ export default {
 
 <style scoped>
 	.background {
-		background-color: var(--black-medium-color);
+		background-color: #222;
 	}
 
 	.background > .menu {
-		background-color: var(--yellow-color);
+		background-color: #F5C618;
 		width: 100%;
 	}
 
 	.background > .post {
-		background-color: var(--white-color);
+		background-color: #FFF;
 		border-radius: 5px;
-		border: 0.5px solid var(--black-color);
+		border: 0.5px solid #131313;
 		max-width: 650px;
 		width: 100%;
 	}
 
 	.background > .post .profile-picture {
 		border-radius: 50%;
-		outline: 2px solid var(--yellow-dark-color);
+		outline: 2px solid #FDBD18;
 	}
 
 	.background > .post .profile-picture img {

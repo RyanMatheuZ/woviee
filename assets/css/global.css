@@ -13,7 +13,7 @@ body {
 
 .input:focus,
 .textarea:focus {
-	border-color: var(--yellow-color);
-    -webkit-box-shadow: 0 0 0 0.125em var(--yellow-color);
-    box-shadow: 0 0 0 0.125em var(--yellow-color);
+	border-color: #F5C618;
+    -webkit-box-shadow: 0 0 0 0.125em #F5C618;
+    box-shadow: 0 0 0 0.125em #F5C618;
 }

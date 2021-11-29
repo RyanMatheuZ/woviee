@@ -13,6 +13,6 @@
 
 <style scoped>
 	header {
-		background-color: var(--white-color);
+		background-color: #FFF;
 	}
 </style>

@@ -52,10 +52,10 @@ export default {
 
 <style scoped>
 	main h1 {
-		color: var(--yellow-color);
+		color: #F5C618;
 	}
 
 	main p {
-		color: var(--black-color);
+		color: #131313;
 	}
 </style>

@@ -113,21 +113,21 @@ export default {
 	}
 
 	form > small a {
-		color: var(--yellow-dark-color);
+		color: #FDBD18;
 	}
 
 	form button {
-		background-color: var(--black-color);
+		background-color: #131313;
 		border: none;
-		color: var(--white-color);
+		color:#FFF;
 		transition: 0.2s ease-in-out;
 		width: 220px;
 	}
 
 	form button:hover {
-		background-color: var(--white-color);
-		color: var(--black-color);
-		outline: 2px solid var(--black-color);
+		background-color:#FFF;
+		color: #131313;
+		outline: 2px solid #131313;
 		transition: 0.2s ease-in-out;
 	}
 </style>
