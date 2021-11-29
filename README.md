@@ -28,6 +28,9 @@ Woviee is a personal project, created for a college exam. The project is a socia
 - Vue.js 2
 - Nuxt 2.15.7
 
+### Libraries
+- **Vuelidate**: Simple, lightweight model-based validation for Vue.js 2.0. (https://vuelidate.js.org/)
+
 ### Integrations
 - **Buefy**: Is a user interface component library made on top of  Vue.js  and  Bulma; two  _fresh_, but well-known, frameworks. Buefy has two core principles: 1. keep stuff simple and 2. be lightweight.
 We like to think that Buefy is the javascript layer for your Bulma interface, since it doesn't require for it to be a sophisticated Single-Page Application. You can import it completely or single components on a ordinary webpage and use Vue.js as a replacement for jQuery. (https://buefy.org/)
