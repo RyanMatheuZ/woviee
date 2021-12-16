@@ -26,7 +26,7 @@ Woviee is a personal project, created for a college exam. The project is a socia
 - HTML 5
 - Bulma 0.9.3
 - Vue.js 2
-- Nuxt 2
+- Nuxt.js 2
 
 ### Libraries
 - **Vuelidate**: Simple, lightweight model-based validation for Vue.js 2.0. (https://vuelidate.js.org/)
